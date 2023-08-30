@@ -1,8 +1,10 @@
 const memo: Map<number, number> = new Map();
 
 export default function fibonacci(n: number): number {
-  if (memo.has(n)) {
-    return memo.get(n)!; 
+  const memoValue = memo.get(n);
+
+  if (memoValue !== undefined) {
+    return memoValue;
   }
 
   if (n < 0) {
