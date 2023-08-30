@@ -21,7 +21,7 @@ import fibonacci from './fib';
 export default (req: Request, res: Response) => {
   const { num } = req.params;
 
-  const fibN = fibonacci(parseInt(num));
+  const fibN: number = fibonacci(parseInt(num));
   let result: string;
 
   if (fibN >= 0) {
